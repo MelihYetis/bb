@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3C8B7BF1-EB92-4115-8634-8962A9D35A98}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectRepository</RootNamespace>
+    <AssemblyName>ProjectRepository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reposiyory\AltKategoriRepository.cs" />
+    <Compile Include="Reposiyory\AraclarRepository.cs" />
+    <Compile Include="Reposiyory\BannerRepository.cs" />
+    <Compile Include="Reposiyory\BedenRepository.cs" />
+    <Compile Include="Reposiyory\BirAltKategoriRepository.cs" />
+    <Compile Include="Reposiyory\CrudRepository.cs" />
+    <Compile Include="Reposiyory\EpostaRepository.cs" />
+    <Compile Include="Reposiyory\GuvenRepository.cs" />
+    <Compile Include="Reposiyory\ImyReposiory.cs" />
+    <Compile Include="Reposiyory\LogoRepository.cs" />
+    <Compile Include="Reposiyory\MailKisiListesiRepository.cs" />
+    <Compile Include="Reposiyory\MenuRepository.cs" />
+    <Compile Include="Reposiyory\MusteriSiparisRepository.cs" />
+    <Compile Include="Reposiyory\ParallaxRepository.cs" />
+    <Compile Include="Reposiyory\PopupRepository.cs" />
+    <Compile Include="Reposiyory\SayfaNewRepository.cs" />
+    <Compile Include="Reposiyory\SayfaRepository.cs" />
+    <Compile Include="Reposiyory\SiparisRepository.cs" />
+    <Compile Include="Reposiyory\SiteRenkRepository.cs" />
+    <Compile Include="Reposiyory\SliderRepository.cs" />
+    <Compile Include="Reposiyory\SolMenuRepository.cs" />
+    <Compile Include="Reposiyory\SosyalMedyaRepository.cs" />
+    <Compile Include="Reposiyory\TasarimSablonOzellikRepository.cs" />
+    <Compile Include="Reposiyory\TasarimSablonRepository.cs" />
+    <Compile Include="Reposiyory\UrunMatchBedenRepository.cs" />
+    <Compile Include="Reposiyory\UrunMatchKategoriRepository.cs" />
+    <Compile Include="Reposiyory\UrunRepository.cs" />
+    <Compile Include="Reposiyory\UstKategoriRepository.cs" />
+    <Compile Include="Reposiyory\UyelerRepository.cs" />
+    <Compile Include="Reposiyory\YaziKategoriRepository.cs" />
+    <Compile Include="Reposiyory\ZiyaretciYorumRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectModel\ProjectModel.csproj">
+      <Project>{2e22a934-87e9-4947-a747-dafd3a004258}</Project>
+      <Name>ProjectModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

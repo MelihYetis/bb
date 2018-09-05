@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E22A934-87E9-4947-A747-DAFD3A004258}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectModel</RootNamespace>
+    <AssemblyName>ProjectModel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Web, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.6\Assemblies\v2.0\MySql.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Context\ContextDataModel.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\AltKategoriler.cs" />
+    <Compile Include="Model\AltMenuler.cs" />
+    <Compile Include="Model\AltSolMenuler.cs" />
+    <Compile Include="Model\Banner.cs" />
+    <Compile Include="Model\Beden.cs" />
+    <Compile Include="Model\BirAltKategoriler.cs" />
+    <Compile Include="Model\BirAltMenuler.cs" />
+    <Compile Include="Model\BirAltSolMenuler.cs" />
+    <Compile Include="Model\Dosyalar.cs" />
+    <Compile Include="Model\Eposta.cs" />
+    <Compile Include="Model\GaleriSayfaResimler.cs" />
+    <Compile Include="Model\Haberler.cs" />
+    <Compile Include="Model\Ilceler.cs" />
+    <Compile Include="Model\IletisimItem.cs" />
+    <Compile Include="Model\Iller.cs" />
+    <Compile Include="Model\JsonModel.cs" />
+    <Compile Include="Model\JsonResultModel.cs" />
+    <Compile Include="Model\Konum.cs" />
+    <Compile Include="Model\Login.cs" />
+    <Compile Include="Model\Logolar.cs" />
+    <Compile Include="Model\MailKisiListesi.cs" />
+    <Compile Include="Model\Marka.cs" />
+    <Compile Include="Model\Menuler.cs" />
+    <Compile Include="Model\Musteri.cs" />
+    <Compile Include="Model\MusteriSiparis.cs" />
+    <Compile Include="Model\MusteriSiparisItem.cs" />
+    <Compile Include="Model\Parallax.cs" />
+    <Compile Include="Model\Popup.cs" />
+    <Compile Include="Model\Resimler.cs" />
+    <Compile Include="Model\Sayfalar.cs" />
+    <Compile Include="Model\SayfalarMetin.cs" />
+    <Compile Include="Model\SayfalarNew.cs" />
+    <Compile Include="Model\SayfalarNewItem.cs" />
+    <Compile Include="Model\SayfalarNewItemPersonel.cs" />
+    <Compile Include="Model\SayfaNewItemBaslik.cs" />
+    <Compile Include="Model\SayfaNewItemDosyaYukle.cs" />
+    <Compile Include="Model\SayfaNewItemGaleri.cs" />
+    <Compile Include="Model\SayfaNewItemIletisim.cs" />
+    <Compile Include="Model\SayfaNewItemMetin.cs" />
+    <Compile Include="Model\SayfaNewItemMetinIkili.cs" />
+    <Compile Include="Model\SayfaNewItemParallax.cs" />
+    <Compile Include="Model\SayfaNewItemSatir.cs" />
+    <Compile Include="Model\SayfaNewItemSlider.cs" />
+    <Compile Include="Model\SayfaNewItemTab.cs" />
+    <Compile Include="Model\SayfaNewItemTabGaleri.cs" />
+    <Compile Include="Model\SayfaNewItemTabItem.cs" />
+    <Compile Include="Model\SayfaNewItemTabMetin.cs" />
+    <Compile Include="Model\SayfaNewItemYazi.cs" />
+    <Compile Include="Model\SayfaNewItemZiyaretciYorumlari.cs" />
+    <Compile Include="Model\SayfaNewItemZiyaretciYorumlariMedya.cs" />
+    <Compile Include="Model\SayfaReklam.cs" />
+    <Compile Include="Model\Siparis.cs" />
+    <Compile Include="Model\SiteRenkleri.cs" />
+    <Compile Include="Model\Slider.cs" />
+    <Compile Include="Model\SliderMatchUrun.cs" />
+    <Compile Include="Model\SliderResimler.cs" />
+    <Compile Include="Model\SlideShow.cs" />
+    <Compile Include="Model\SolMenu.cs" />
+    <Compile Include="Model\SolMenuGrup.cs" />
+    <Compile Include="Model\SosyalMedya.cs" />
+    <Compile Include="Model\TasarimSablon.cs" />
+    <Compile Include="Model\TasarimSablonOzellik.cs" />
+    <Compile Include="Model\Test.cs" />
+    <Compile Include="Model\Urun.cs" />
+    <Compile Include="Model\Urunler.cs" />
+    <Compile Include="Model\UrunMatchBeden.cs" />
+    <Compile Include="Model\UrunMatchImage.cs" />
+    <Compile Include="Model\UrunMatchKategori.cs" />
+    <Compile Include="Model\UrunResimTab.cs" />
+    <Compile Include="Model\UrunTab.cs" />
+    <Compile Include="Model\UrunTabMetin.cs" />
+    <Compile Include="Model\UstKategoriler.cs" />
+    <Compile Include="Model\Uyeler.cs" />
+    <Compile Include="Model\ViewModelInterWeb.cs" />
+    <Compile Include="Model\ViewModelKategori.cs" />
+    <Compile Include="Model\ViewModelMenuler.cs" />
+    <Compile Include="Model\ViewModelMusteriSiparis.cs" />
+    <Compile Include="Model\ViewModelSayfalar.cs" />
+    <Compile Include="Model\ViewModelSayfalarNew.cs" />
+    <Compile Include="Model\ViewModelSlider.cs" />
+    <Compile Include="Model\ViewModelSolMenuler.cs" />
+    <Compile Include="Model\ViewModelUrun.cs" />
+    <Compile Include="Model\ViewModelUyeler.cs" />
+    <Compile Include="Model\ViewModelYaziKategori.cs" />
+    <Compile Include="Model\Yazi.cs" />
+    <Compile Include="Model\YaziKategori.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\PagedList.css" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
